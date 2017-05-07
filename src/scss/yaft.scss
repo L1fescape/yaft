@@ -4,14 +4,6 @@
   box-sizing: border-box;
 }
 
-.yaft-table-container {
-  overflow: auto;
-}
-
-.thead {
-  overflow: auto;
-}
-
 .thead-container, .tr {
   display: flex;
   flex-direction: row;

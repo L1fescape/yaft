@@ -15,9 +15,13 @@ class Table extends Component {
     const header = element.querySelector('.thead')
     const body = element.querySelector('.tbody')
     const container = element.querySelector('.yaft-table-container')
+    const isContainerRelative = window.getComputedStyle(scrollContainer).position === 'relative'
 
     return () => {
-      const fixed = element.offsetTop - scrollContainer.scrollTop <= scrollContainer.offsetTop - container.offsetTop
+      let fixed = scrollContainer.scrollTop >= element.offsetTop
+      if (!isContainerRelative) {
+        fixed = scrollContainer.scrollTop + scrollContainer.offsetTop >= element.offsetTop + container.offsetTop
+      }
       let absolute = false // fixed && scrollContainer.scrollTop >= element.offsetTop + element.offsetHeight - header.offsetHeight
 
       let style = {
@@ -44,13 +48,13 @@ class Table extends Component {
       }
 
       raf(() => {
+        body.style.paddingTop = fixed ? `${header.clientHeight}px` : '0'
+
         for (var key in style) {
           if (style.hasOwnProperty(key)) {
             header.style.setProperty(key, style[key])
           }
         }
-        body.style.paddingTop = fixed ? `${header.offsetHeight}px` : '0'
-
 
         if (this.state.fixed != fixed) {
           this.setState({
