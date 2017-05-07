@@ -1,0 +1,37 @@
+.yaft-table {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.yaft-table-container {
+  overflow: auto;
+}
+
+.thead {
+  overflow: auto;
+}
+
+.thead-container, .tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: whiteSmoke;
+  box-sizing: border-box;
+  border: 1px solid black;
+  width: 100%;
+}
+
+
+.tr {
+  border: 1px solid black;
+  border-top: 0;
+}
+
+.td, .th {
+  text-align: left;
+  flex: 1;
+  display: flex;
+  padding: 0.25em 0.5em;
+  align-items: center;
+}
