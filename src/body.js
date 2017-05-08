@@ -20,7 +20,7 @@ class Body extends Component {
         { data.map((rowData, i) => {
           return (
             <div key={i} className="tr">
-              { columns.map((props, j) => <Column key={j} columnProps={props} data={rowData} />) }
+              { columns.map((props, j) => <Column key={j} rowIndex={i} columnProps={props} data={rowData} />) }
             </div>
           )
         }) }
