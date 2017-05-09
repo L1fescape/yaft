@@ -1,6 +1,6 @@
 {
   "name": "yaft",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Yet another fucking table",
   "main": "./lib/index",
   "files": [
