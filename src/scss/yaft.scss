@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.thead {
+  z-index: 1;
+}
+
 .thead-container, .tr {
   display: flex;
   flex-direction: row;
