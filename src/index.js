@@ -110,11 +110,11 @@ class Table extends Component {
 
 
   render() {
-    const { columns, className, fixedHeader, header, data } = this.props
+    const { columns, className, fixedHeader, header, data, scroll } = this.props
     const shouldBeFixed = fixedHeader && this.state.fixed
 
     return (
-      <div className={`yaft-table ${className || ""}`}>
+      <div className={`yaft-table ${scroll ? "scroll" : ""} ${className || ""}`}>
         <div className="yaft-table-container">
           <div className="thead">
             { header && <div className="thead-header">{header}</div> }

@@ -4,6 +4,21 @@
   box-sizing: border-box;
 }
 
+.yaft-table.scroll {
+  height: 100%;
+
+  .tbody {
+    overflow-y: scroll;
+    height: 100%;
+  }
+}
+
+.yaft-table-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .thead {
   z-index: 1;
 }
@@ -14,14 +29,7 @@
   justify-content: space-between;
   background: whiteSmoke;
   box-sizing: border-box;
-  border: 1px solid black;
   width: 100%;
-}
-
-
-.tr {
-  border: 1px solid black;
-  border-top: 0;
 }
 
 .td, .th {
