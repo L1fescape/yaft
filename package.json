@@ -28,6 +28,7 @@
     "url": "https://github.com/L1fescape/yaft.git"
   },
   "dependencies": {
+    "object-hash": "^1.1.8",
     "raf": "^3.3.2"
   },
   "devDependencies": {

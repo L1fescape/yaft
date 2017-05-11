@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import hash from 'object-hash'
 
 import Column from './column'
 
@@ -9,7 +10,7 @@ class Body extends Component {
       return this.props.shouldComponentUpdate(nextProps, nextState, this.props, this.state)
     }
 
-    return this.props.data.length !== nextProps.data.length
+    return hash(this.props.data) !== hash(nextProps.data)
   }
 
   render() {
