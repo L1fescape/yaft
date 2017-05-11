@@ -76,6 +76,7 @@ class Table extends Component {
     const scrollListener = this.onScroll(element, scrollContainer)
     scrollContainer.addEventListener('scroll', scrollListener)
     window.addEventListener('resize', scrollListener)
+    scrollListener()
 
     this.setState({
       scrollContainer: scrollContainer,
